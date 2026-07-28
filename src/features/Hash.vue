@@ -93,7 +93,7 @@ watch([text, encoding], () => void generateHashes(), { immediate: true });
     <div class="mx-auto grid w-full max-w-2xl gap-4">
         <Textarea
             v-model="text"
-            class="scrollbar font-code field-sizing-fixed h-40 w-full resize-none"
+            class="scrollbar field-sizing-fixed h-40 w-full resize-none font-code"
             name="hash-input"
             placeholder="Input text"
             :spellcheck="false"
@@ -120,14 +120,14 @@ watch([text, encoding], () => void generateHashes(), { immediate: true });
             <div
                 v-for="result in results"
                 :key="result.algorithm"
-                class="border-input grid min-h-0 grid-cols-[88px_minmax(0,1fr)_32px] items-center gap-3 rounded-[10px] border p-1"
+                class="grid min-h-0 grid-cols-[88px_minmax(0,1fr)_32px] items-center gap-3 rounded-[10px] border border-input p-1"
             >
                 <span
-                    class="bg-muted text-muted-foreground rounded-sm px-2 py-1 text-center text-sm font-medium"
+                    class="rounded-sm bg-muted px-2 py-1 text-center text-sm font-medium text-muted-foreground"
                 >
                     {{ result.algorithm }}
                 </span>
-                <code class="font-code min-w-0 truncate text-sm">{{ result.value }}</code>
+                <code class="min-w-0 truncate font-code text-sm">{{ result.value }}</code>
                 <Button size="icon" variant="ghost" @click="copyHash(result)">
                     <CopyCheckIcon v-if="copiedAlgorithm === result.algorithm" />
                     <CopyIcon v-else />

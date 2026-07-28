@@ -124,7 +124,7 @@ async function copyColor(value: string) {
             <div class="flex flex-col gap-2">
                 <Label>Color</Label>
                 <div
-                    class="border-border h-10 w-16 shrink-0 overflow-hidden rounded-sm border bg-[linear-gradient(45deg,var(--color-muted)_25%,transparent_25%),linear-gradient(-45deg,var(--color-muted)_25%,transparent_25%),linear-gradient(45deg,transparent_75%,var(--color-muted)_75%),linear-gradient(-45deg,transparent_75%,var(--color-muted)_75%)] bg-size-[12px_12px] bg-position-[0_0,0_6px,6px_-6px,-6px_0]"
+                    class="h-10 w-16 shrink-0 overflow-hidden rounded-sm border border-border bg-[linear-gradient(45deg,var(--color-muted)_25%,transparent_25%),linear-gradient(-45deg,var(--color-muted)_25%,transparent_25%),linear-gradient(45deg,transparent_75%,var(--color-muted)_75%),linear-gradient(-45deg,transparent_75%,var(--color-muted)_75%)] bg-size-[12px_12px] bg-position-[0_0,0_6px,6px_-6px,-6px_0]"
                 >
                     <Input
                         v-model="pickerColor"
@@ -139,26 +139,26 @@ async function copyColor(value: string) {
                 <Input
                     v-model="input"
                     :aria-invalid="!!errorMessage || undefined"
-                    class="font-code h-10"
+                    class="h-10 font-code"
                     placeholder="#3b82f6, rgb(59 130 246), oklch(62% 0.18 255)"
                 />
             </div>
         </div>
 
-        <div class="border-border min-h-0 flex-1 overflow-hidden rounded-sm border">
+        <div class="min-h-0 flex-1 overflow-hidden rounded-sm border border-border">
             <div
                 v-if="colorFormats.length"
-                class="divide-border grid h-full min-h-0 grid-rows-8 divide-y overflow-auto"
+                class="grid h-full min-h-0 grid-rows-8 divide-y divide-border overflow-auto"
             >
                 <div
                     v-for="format in colorFormats"
                     :key="format.label"
                     class="grid min-h-12 grid-cols-[5rem_minmax(0,1fr)_2.5rem] items-center gap-3 px-3"
                 >
-                    <span class="text-muted-foreground text-xs font-medium">
+                    <span class="text-xs font-medium text-muted-foreground">
                         {{ format.label }}
                     </span>
-                    <code class="font-code truncate text-sm">
+                    <code class="truncate font-code text-sm">
                         {{ format.value }}
                     </code>
                     <Button size="icon" variant="ghost" @click="copyColor(format.value)">
@@ -170,13 +170,13 @@ async function copyColor(value: string) {
 
             <div
                 v-else
-                class="text-muted-foreground flex h-full min-h-0 items-center justify-center p-4"
+                class="flex h-full min-h-0 items-center justify-center p-4 text-muted-foreground"
             >
                 <PaletteIcon />
             </div>
         </div>
 
-        <p v-if="errorMessage" class="text-destructive flex shrink-0 items-center gap-2 text-sm">
+        <p v-if="errorMessage" class="flex shrink-0 items-center gap-2 text-sm text-destructive">
             <PaletteIcon />
             {{ errorMessage }}
         </p>

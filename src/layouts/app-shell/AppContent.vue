@@ -47,7 +47,7 @@ watchEffect(() => (themeStore.value = themeState.value));
         <div v-if="selectedFeature" class="mx-auto flex h-full w-full max-w-6xl flex-col gap-5">
             <div class="space-y-2">
                 <h1 class="text-3xl font-semibold">{{ selectedFeature.name }}</h1>
-                <p class="text-muted-foreground text-sm">
+                <p class="text-sm text-muted-foreground">
                     {{ selectedFeature.description }}
                 </p>
             </div>

@@ -89,7 +89,7 @@ async function copyOutput() {
             <CodeMirrorEditor class="min-h-0" :model-value="output" readonly wrapLine />
         </div>
 
-        <p v-if="errorMessage" class="text-destructive flex shrink-0 items-center gap-2 text-sm">
+        <p v-if="errorMessage" class="flex shrink-0 items-center gap-2 text-sm text-destructive">
             <LinkIcon />
             {{ errorMessage }}
         </p>

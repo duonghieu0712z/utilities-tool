@@ -164,7 +164,7 @@ onMounted(generateUuid);
                         type="text"
                         @input="generateUuid"
                     />
-                    <p v-if="namespaceError" class="text-destructive text-sm">
+                    <p v-if="namespaceError" class="text-sm text-destructive">
                         {{ namespaceError }}
                     </p>
                 </div>

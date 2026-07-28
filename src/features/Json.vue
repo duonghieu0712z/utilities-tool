@@ -148,7 +148,7 @@ async function copyJson() {
             />
         </div>
 
-        <p v-if="errorMessage" class="text-destructive flex shrink-0 items-center gap-2 text-sm">
+        <p v-if="errorMessage" class="flex shrink-0 items-center gap-2 text-sm text-destructive">
             <BracesIcon />
             {{ errorMessage }}
         </p>

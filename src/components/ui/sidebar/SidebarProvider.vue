@@ -83,7 +83,7 @@ provideSidebarContext({
         <div
             :class="
                 cn(
-                    'group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex h-full min-h-0 w-full overflow-hidden overscroll-none',
+                    'group/sidebar-wrapper flex h-full min-h-0 w-full overflow-hidden overscroll-none has-data-[variant=inset]:bg-sidebar',
                     props.class,
                 )
             "

@@ -183,11 +183,11 @@ onBeforeUnmount(() => {
     <div
         :class="
             cn(
-                'placeholder:text-muted-foreground dark:bg-input/30 flex min-h-0 w-full rounded-sm bg-transparent text-sm shadow-xs transition-[color,box-shadow] outline-none',
-                'focus-visible:ring-ring/50 focus-visible:border-ring focus-visible:ring-[1.5px]',
-                'aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive',
+                'flex min-h-0 w-full rounded-sm bg-transparent text-sm shadow-xs transition-[color,box-shadow] outline-none placeholder:text-muted-foreground dark:bg-input/30',
+                'focus-visible:border-ring focus-visible:ring-[1.5px] focus-visible:ring-ring/50',
+                'aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40',
                 'disabled:cursor-not-allowed disabled:opacity-50',
-                '[&_.cm-scroller]:scrollbar [&_.cm-content]:font-code [&_.cm-content]:cursor-text',
+                '[&_.cm-scroller]:scrollbar [&_.cm-content]:cursor-text [&_.cm-content]:font-code',
                 'overflow-hidden',
                 props.class,
             )
