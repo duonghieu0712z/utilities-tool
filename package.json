@@ -39,7 +39,7 @@
         "codemirror": "^6.0.2",
         "culori": "^4.0.2",
         "lorem-ipsum": "^3.0.0",
-        "pinia": "^3.0.4",
+        "pinia": "^4.0.3",
         "reka-ui": "^2.10.4",
         "tailwind-merge": "^3.6.0",
         "uuid": "^14.0.2",
